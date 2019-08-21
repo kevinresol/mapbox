@@ -8,9 +8,9 @@ extern class Supercluster<Properties:{}, Reduced> {
 	function load(points:Array<Feature<Point, Properties>>):Void;
 	function getClusters(bbox:Array<Float>, zoom:Float):Array<PointOrCluster<Properties>>;
 	function getTile(zoom:Float, x:Float, y:Float):Any;
-	function getChildren(clusterId:String):Array<Any>;
-	function getLeaves(clusterId:String, ?limit:Int, ?offset:Int):Array<Feature<Point, Properties>>;
-	function getClusterExpansionZoom(clusterId:String):Float;
+	function getChildren(clusterId:Int):Array<Any>;
+	function getLeaves(clusterId:Int, ?limit:Int, ?offset:Int):Array<Feature<Point, Properties>>;
+	function getClusterExpansionZoom(clusterId:Int):Float;
 }
 
 @:forward
